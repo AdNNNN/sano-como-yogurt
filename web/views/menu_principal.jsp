@@ -1,13 +1,13 @@
 <%-- 
-    Document   : inscripcion_usuario
-    Created on : 18-06-2019, 19:23:29
+    Document   : menu_principal
+    Created on : 22-06-2019, 15:16:11
     Author     : y520
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>SCY</title>
@@ -19,28 +19,22 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
-                    <form action="/SanoComoYogurt/InscripcionUsuarioServlet" method="post">
+                    <form>
                         <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" aria-describedby="nombreHelp" placeholder="Ingresar nombre">
+                            <a href="inscripcion_usuario.jsp" class="btn btn-primary">Agregar</a>
                         </div>
                         <div class="form-group">
-                            <label for="pass">Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password">
+                            <a href="buscar_usuario.jsp" class="btn btn-primary">Buscar</a>
                         </div>
                         <div class="form-group">
-                            <label for="nombre">Rut</label>
-                            <input type="text" class="form-control" name="rut" aria-describedby="rutHelp" placeholder="Ingresar rut">
+                            <a href="modificar_usuario.jsp" class="btn btn-primary">Modificar</a>
                         </div>
                         <div class="form-group">
-                            <label for="telefono">Telefono</label>
-                            <input type="text" class="form-control" name="telefono" aria-describedby="telefonoHelp" placeholder="Ingresar telefono">
+                            <a href="listar_usuarios.jsp" class="btn btn-primary">Listar</a>
                         </div>
                         <div class="form-group">
-                            <label for="correo">Direccion de correo</label>
-                            <input type="email" class="form-control" name="correo" aria-describedby="correoHelp" placeholder="Ingresar correo">
+                            <a href="eliminar_usuario.jsp" class="btn btn-primary">Eliminar</a>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Enviar">
                     </form>
                 </div>
             </div>

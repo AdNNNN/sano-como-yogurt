@@ -6,6 +6,7 @@
 package Servlet;
 
 import DB.UsuarioQuerys;
+import Models.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author y520
  */
-public class LoginServlet extends HttpServlet {
+public class InscripcionUsuarioServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,18 +32,40 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
         PrintWriter out = response.getWriter();
-        String email = request.getParameter("email");
-        String pass = request.getParameter("pass");
-        
+
+        Usuario usuario = new Usuario();
         UsuarioQuerys uq = new UsuarioQuerys();
-        if (uq.login(email, pass)) {
-            response.sendRedirect("views/menu_principal.jsp");
-        }else{
-            System.out.println(false);
-            response.sendRedirect("");
+
+        usuario.setCorreo(request.getParameter("correo"));
+        usuario.setNombre(request.getParameter("nombre"));
+        usuario.setPassword(request.getParameter("password"));
+        usuario.setRut(request.getParameter("rut"));
+        usuario.setTelefono(request.getParameter("telefono"));
+
+        try {
+            uq.store(usuario);
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet InscripcionMedicoServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("Agregado");
+            out.println("</br> </b>");
+            out.println("Usuario: " + usuario.getNombre());
+            out.println("</br>");
+            out.println("Password: " + usuario.getPassword());
+            out.println("</br>");
+            out.println("Correo: " + usuario.getCorreo());
+            out.println("</br>");
+            out.println("<label><a href=\"/SanoComoYogurt\">Volver</a></label>");
+            out.println("</body>");
+            out.println("</html>");            
+        } catch (Exception e) {
+            System.out.println(e);
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

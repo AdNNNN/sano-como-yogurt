@@ -3,13 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/ReservaQuerys.java</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/Servlet/LoginServlet.java</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/web/views/disponibilidad_medico.jsp</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/web/views/inscripcion_medico.jsp</file>
             <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/UsuarioQuerys.java</file>
-            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/PacienteDolenciaQuerys.java</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/web/views/reservas_usuario.jsp</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/web/views/inscripcion_usuario.jsp</file>
             <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/MedicoQuerys.java</file>
-            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/DolenciaQuerys.java</file>
-            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/EspecialidadQuerys.java</file>
-            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/src/java/DB/PrivilegioQuerys.java</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/web/views/listar_usuarios.jsp</file>
+            <file>file:/C:/Users/y520/Desktop/Elvis/SanoComoYogurt/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

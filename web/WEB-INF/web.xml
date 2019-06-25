@@ -4,9 +4,57 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>Servlet.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InscripcionUsuarioServlet</servlet-name>
+        <servlet-class>Servlet.InscripcionUsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InscripcionMedicoServlet</servlet-name>
+        <servlet-class>Servlet.InscripcionMedicoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BuscarUsuarioServlet</servlet-name>
+        <servlet-class>Servlet.BuscarUsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModificarUsuarioServlet</servlet-name>
+        <servlet-class>Servlet.ModificarUsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>M2UsuarioServlet</servlet-name>
+        <servlet-class>Servlet.M2UsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarUsuarioServlet</servlet-name>
+        <servlet-class>Servlet.EliminarUsuarioServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InscripcionUsuarioServlet</servlet-name>
+        <url-pattern>/InscripcionUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InscripcionMedicoServlet</servlet-name>
+        <url-pattern>/InscripcionMedicoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarUsuarioServlet</servlet-name>
+        <url-pattern>/BuscarUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModificarUsuarioServlet</servlet-name>
+        <url-pattern>/ModificarUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>M2UsuarioServlet</servlet-name>
+        <url-pattern>/M2UsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarUsuarioServlet</servlet-name>
+        <url-pattern>/EliminarUsuarioServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

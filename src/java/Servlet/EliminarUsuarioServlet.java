@@ -6,6 +6,7 @@
 package Servlet;
 
 import DB.UsuarioQuerys;
+import Models.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author y520
  */
-public class LoginServlet extends HttpServlet {
+public class EliminarUsuarioServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,15 +34,19 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         PrintWriter out = response.getWriter();
-        String email = request.getParameter("email");
-        String pass = request.getParameter("pass");
+        int id = Integer.parseInt(request.getParameter("id"));
         
         UsuarioQuerys uq = new UsuarioQuerys();
-        if (uq.login(email, pass)) {
-            response.sendRedirect("views/menu_principal.jsp");
-        }else{
-            System.out.println(false);
-            response.sendRedirect("");
+        
+        Usuario usuario = new Usuario();
+        
+        try {
+            if (uq.delete(id)) {
+                out.println("Eliminado");
+            }else{
+                out.println("No eliminado");
+            }
+        } catch (Exception e) {
         }
     }
 

@@ -6,6 +6,7 @@
 package Servlet;
 
 import DB.UsuarioQuerys;
+import Models.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author y520
  */
-public class LoginServlet extends HttpServlet {
+public class M2UsuarioServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,17 +32,23 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
         PrintWriter out = response.getWriter();
-        String email = request.getParameter("email");
-        String pass = request.getParameter("pass");
         
         UsuarioQuerys uq = new UsuarioQuerys();
-        if (uq.login(email, pass)) {
-            response.sendRedirect("views/menu_principal.jsp");
-        }else{
-            System.out.println(false);
-            response.sendRedirect("");
+        Usuario usuario = new Usuario();
+        
+        usuario.setId(Integer.parseInt(request.getParameter("id")));
+        usuario.setNombre(request.getParameter("nombre"));
+        usuario.setCorreo(request.getParameter("correo"));
+        usuario.setPassword(request.getParameter("password"));
+        usuario.setPrivilegios_id(1);
+        usuario.setRut(request.getParameter("rut"));
+        usuario.setTelefono(request.getParameter("telefono"));
+        
+        try {
+            uq.update(usuario);
+            out.println("Modificado");
+        } catch (Exception e) {
         }
     }
 

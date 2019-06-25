@@ -107,16 +107,15 @@ public class UsuarioQuerys extends MysqlConnector {
 
     public boolean store(Usuario usuario) throws SQLException {
         List<Object> args = new ArrayList<>();
-        String query = "insert into usuarios(privilegios_id,nombre,password,rut,telefono,correo) values ?,?,?,?,?,?";
-        args.add(usuario.getPrivilegios_id());
+        String query = "insert into usuarios(privilegios_id,nombre,password,rut,telefono,correo) values (?,?,?,?,?,?)";
+        args.add((usuario.getPrivilegios_id() != 0) ? usuario.getPrivilegios_id() : 1);
         args.add(usuario.getNombre());
         args.add(usuario.getPassword());
         args.add(usuario.getRut());
         args.add(usuario.getTelefono());
         args.add(usuario.getCorreo());
-        args.add(usuario.getId());
         executeStore(query, args);
-        return false;
+        return true;
     }
 
     public boolean delete(int id) throws SQLException {
@@ -131,4 +130,5 @@ public class UsuarioQuerys extends MysqlConnector {
         }
         return false;
     }
+
 }

@@ -19,28 +19,12 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
-                    <form action="/SanoComoYogurt/InscripcionUsuarioServlet" method="post">
+                    <form action="/SanoComoYogurt/ModificarUsuarioServlet" method="post">
                         <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" aria-describedby="nombreHelp" placeholder="Ingresar nombre">
+                            <label for="id">ID</label>
+                            <input type="text" class="form-control" name="id" aria-describedby="idHelp" placeholder="Ingresar id">
                         </div>
-                        <div class="form-group">
-                            <label for="pass">Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="nombre">Rut</label>
-                            <input type="text" class="form-control" name="rut" aria-describedby="rutHelp" placeholder="Ingresar rut">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Telefono</label>
-                            <input type="text" class="form-control" name="telefono" aria-describedby="telefonoHelp" placeholder="Ingresar telefono">
-                        </div>
-                        <div class="form-group">
-                            <label for="correo">Direccion de correo</label>
-                            <input type="email" class="form-control" name="correo" aria-describedby="correoHelp" placeholder="Ingresar correo">
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Enviar">
+                        <input type="submit" class="btn btn-primary" value="Buscar">
                     </form>
                 </div>
             </div>
